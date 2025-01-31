@@ -1,123 +1,142 @@
-# 🌤️ Weather App - Bash Script
+# Termux GeoWeather 🌤️
 
-A simple yet powerful Bash script for retrieving weather forecasts and public IP details, designed for use with Termux on Android. This script utilizes OpenWeatherMap API and Termux's location service to provide real-time weather data.
-
----
-
-## 📌 Features
-
-✅ Fetch public IP and ISP details using `ip-api.com`\
-✅ Retrieve precise latitude and longitude using `termux-location`\
-✅ Get weather forecasts based on latitude & longitude\
-✅ Display location details using OpenStreetMap's Nominatim API\
-✅ Beautiful and interactive command-line interface with colors & emojis\
-✅ Generates a Google Maps link for easy navigation\
-✅ Lightweight, fast, and easy to use
+A powerful and user-friendly Termux script to display your **public IP details**, **precise location (latitude and longitude)**, and **weather forecasts** based on your coordinates. Perfect for Termux users who want quick access to location and weather information.
 
 ---
 
-## 🛠️ Requirements
+## Features ✨
 
-Ensure you have the following installed in Termux:
-
-- **Termux App** (Android)
-- `curl` (for making API requests)
-- `jq` (for parsing JSON responses)
-- `termux-api` (for accessing location services)
-
-Install dependencies using:
-
-```bash
-pkg update && pkg upgrade
-pkg install curl jq termux-api
-```
+- **Display Public IP Details**: Get your public IP address, location (city, region, country), ISP, organization, and more.
+- **Display My Latitude & Longitude**: Fetch and display your precise location using Termux's GPS capabilities.
+- **Forecast Weather by Latitude and Longitude**: Enter latitude and longitude to get real-time weather forecasts, including temperature, humidity, wind speed, and more.
+- **Beautiful Design**: Colorful and organized output for a great user experience.
+- **Easy to Use**: Simple menu-driven interface for seamless navigation.
 
 ---
 
-## 🔧 Setup
+## Installation 🛠️
 
-### 1️⃣ Get an OpenWeatherMap API Key
+### Prerequisites
+- **Termux**: Ensure you have Termux installed on your Android device.
+- **Dependencies**: Install the following dependencies in Termux:
+  ```bash
+  pkg update && pkg upgrade
+  pkg install curl jq
+  ```
 
-This script requires an API key from [OpenWeatherMap](https://home.openweathermap.org/api_keys):
-
-1. Sign up at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up)
-2. Go to the [API Keys](https://home.openweathermap.org/api_keys) section
-3. Copy your API key
-
-### 2️⃣ Save the API Key
-
-Edit the script and replace `YOUR_API_KEY_HERE`:
-
-```bash
-API_KEY="YOUR_API_KEY_HERE"
-```
-
-Alternatively, set it as an environment variable:
-
-```bash
-echo 'export WEATHER_API_KEY="YOUR_API_KEY_HERE"' >> ~/.bashrc
-source ~/.bashrc
-```
+### Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/termux-geoweather.git
+   ```
+2. Navigate to the repository:
+   ```bash
+   cd termux-geoweather
+   ```
+3. Make the script executable:
+   ```bash
+   chmod +x termux-geoweather.sh
+   ```
 
 ---
 
-## 🚀 Usage
+## Usage 🚀
 
-Run the script using:
-
+Run the script in Termux:
 ```bash
-bash weather.sh
+bash termux-geoweather.sh
 ```
 
-You will see a menu with options:
+### Menu Options
+1. **Display Public IP Details**: Shows your public IP address, location, ISP, and more.
+2. **Display My Latitude & Longitude**: Fetches and displays your precise location using GPS.
+3. **Forecast Weather by Latitude and Longitude**: Enter latitude and longitude to get weather forecasts.
+4. **Exit**: Exit the script.
 
+---
+
+## Example Outputs 📄
+
+### Option 1: Display Public IP Details
 ```
 ==============================================
-          🌤️  Locate & Forecast   🌤️          
+== Public IP Details ==
 ==============================================
-Please choose an option:
-1) Display Public IP Details
-2) Display my Latitude & Longitude
-3) Forecast weather by Latitude and Longitude
-4) Exit
+Public IP: 123.45.67.89
+City: New York
+Region: New York
+Country: United States
+Latitude: 40.7128
+Longitude: -74.0060
+ISP: Example ISP
+Organization: Example Organization
+Timezone: America/New_York
+Google Maps Location: https://www.google.com/maps?q=40.7128,-74.0060
 ```
 
-### 🏠 Option 1: Public IP Details
+### Option 2: Display My Latitude & Longitude
+```
+Your precise location:
+Latitude: 40.7128
+Longitude: -74.0060
+```
 
-Fetches your IP, ISP, city, and country details, along with a Google Maps link.
+### Option 3: Forecast Weather by Latitude and Longitude
+```
+Enter latitude: 40.7128
+Enter longitude: -74.0060
+Location: New York, NY, USA
 
-### 📍 Option 2: Precise Location
-
-Uses Termux's GPS service to get accurate latitude and longitude.
-
-### 🌦️ Option 3: Weather Forecast
-
-1. Enter latitude and longitude manually.
-2. The script fetches the location name and current weather details.
-
----
-
-## ❗ Error Handling
-
-- **API Key Errors:** Ensure your OpenWeatherMap API key is valid.
-- **GPS Issues:** Enable location services and grant Termux location permission.
-- **Internet Issues:** Check your connection before running the script.
-- **Missing Dependencies:** Ensure `curl`, `jq`, and `termux-api` are installed.
-
----
-
-## 🔄 Future Improvements
-
-🚀 Planned updates:
-- Auto-detect city based on IP when GPS is unavailable
-- Support weather lookup by city name
-- Additional weather details (e.g., UV index, air quality)
+🌡️  Temperature: 15°C
+🤔 Feels like: 14°C
+💧 Humidity: 60%
+☁️  Weather: Clear
+🌬️  Wind Speed: 5 m/s
+📊 Pressure: 1013 hPa
+```
 
 ---
 
-## 📝 License
+## Contributing 🤝
 
-This script is open-source and free to use.
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
-🚀 Created by **Pejman Morovat**
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
+---
+
+## License 📜
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author 👨‍💻
+
+- **Pejman Morovat**
+- GitHub: [pejmanmorovat](https://github.com/pejmanmorovat)
+- Email: your-email@example.com
+
+---
+
+## Acknowledgments 🙏
+
+- Thanks to [OpenWeatherMap](https://openweathermap.org/) for providing the weather API.
+- Thanks to [ip-api.com](http://ip-api.com/) for providing the IP details API.
+
+---
+
+Enjoy using **Termux GeoWeather**! If you find this script helpful, don't forget to give it a ⭐ on GitHub!
