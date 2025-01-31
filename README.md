@@ -44,11 +44,11 @@ A powerful and user-friendly Termux script to display your **public IP details**
 
 Run the script in Termux:
 ```bash
-bash termux-geoweather.sh
+./geoweather.sh
 ```
 
 ### Menu Options
-1. **Display Public IP Details**: Shows your public IP address, location, ISP, and more.
+1. **Display Public IP Details**: Shows your public IP address, location, and more.
 2. **Display My Latitude & Longitude**: Fetches and displays your precise location using GPS.
 3. **Forecast Weather by Latitude and Longitude**: Enter latitude and longitude to get weather forecasts.
 4. **Exit**: Exit the script.
