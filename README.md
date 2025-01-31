@@ -1,4 +1,4 @@
-# Termux GeoWeather 🌤️
+# Locate & Forecast 🌤️
 
 A powerful and user-friendly Termux script to display your **public IP details**, **precise location (latitude and longitude)**, and **weather forecasts** based on your coordinates. Perfect for Termux users who want quick access to location and weather information.
 
@@ -35,7 +35,7 @@ A powerful and user-friendly Termux script to display your **public IP details**
    ```
 3. Make the script executable:
    ```bash
-   chmod +x termux-geoweather.sh
+   chmod +x geoweather.sh
    ```
 
 ---
