@@ -27,7 +27,7 @@ A powerful and user-friendly Termux script to display your **public IP details**
 ### Steps
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/termux-geoweather.git
+   git clone https://github.com/pejmanmorovat/termux-geoweather.git
    ```
 2. Navigate to the repository:
    ```bash
@@ -128,7 +128,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 - **Pejman Morovat**
 - GitHub: [pejmanmorovat](https://github.com/pejmanmorovat)
-- Email: your-email@example.com
+- Email: pejmanmorovat@yahoo.com 
 
 ---
 
