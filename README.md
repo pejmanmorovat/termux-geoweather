@@ -19,7 +19,7 @@ A powerful and user-friendly Termux script to display your **public IP details**
 ### Prerequisites
 - **Termux**: Ensure you have Termux installed on your Android device.
 - **Termux API**: Install Termux:API from playstore app or F-Droid repositories.
-https://f-droid.org/packages/com.termux.api/
+[F-Droid Termux:API link](https://f-droid.org/packages/com.termux.api/)
 - **Dependencies**: Install the following dependencies in Termux:
   ```bash
   pkg update && pkg upgrade
